@@ -9,7 +9,7 @@
         {% if page == 'register' %}
         <div class="auth__header text-center">
           <a href="/">
-            <img src="images/icon.svg" alt="icon" />
+            <img src="{% static 'images/icon.svg' %}" alt="icon" />
           </a>
           <h3>Account SignUp</h3>
           <p>Create a new developer account</p>
@@ -23,8 +23,11 @@
           <div class="form__field">
             <label for="formInput#text">{{field.label}}: </label>
             {{field}}
+            {% comment %} {% if field.help_text %}
+              <small>{{field.help_text}}</small>
+            {% endif %} {% endcomment %}
             {% for error in field.errors %}
-            <p style="color: red">{{error}}</p>
+              <p style="color: red">{{error}}</p>
             {% endfor %}
           </div>
           {% endfor %}
