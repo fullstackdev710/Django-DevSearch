@@ -4,8 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Profile
+from django.db.models import Q
+from .models import Profile, Skill
 from .forms import CustomUserCreationForm, ProfileForm, SkillForm
+from .utils import searchProfiles
 
 # Create your views here.
 
@@ -64,8 +66,9 @@ def registerUser(request):
 
 
 def profiles(request):
-    profiles = Profile.objects.all()
-    context = {"profiles": profiles}
+    profiles, search_query = searchProfiles(request)
+
+    context = {"profiles": profiles, "search_query": search_query}
     return render(request, 'users/profiles.html', context)
 
 
