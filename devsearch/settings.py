@@ -123,7 +123,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PART = '587'
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'fullstack710dev@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'aaa'
 
 
 # Static files (CSS, JavaScript, Images)
