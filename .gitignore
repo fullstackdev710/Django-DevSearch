@@ -1,3 +1,2 @@
-/staticfiles/*
-devsearch/
-settings.py
+staticfiles/*
+devsearch/*
