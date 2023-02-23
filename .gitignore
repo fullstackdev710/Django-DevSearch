@@ -1,0 +1,7 @@
+staticfiles/*
+devsearch/__pycache__/*
+devsearch/settings.py
+projects/__pycache__/*
+projects/migrations/*
+users/__pycache__/*
+users/migrations/*
