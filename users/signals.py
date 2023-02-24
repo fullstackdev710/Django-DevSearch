@@ -24,8 +24,7 @@ def createProfile(sender, instance, created, **kwargs):
         send_mail(
             subject,
             message,
-            # settings.EMAIL_HOST_USER,
-            "email@peacemarketing.com.au",
+            settings.DEFAULT_FROM_EMAIL,
             [profile.email],
             fail_silently=False,
         )
